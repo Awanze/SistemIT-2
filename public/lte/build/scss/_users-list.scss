@@ -1,0 +1,45 @@
+//
+// Component: Master Staff
+//
+
+.Staff-list {
+  @include list-unstyled;
+
+  > li {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    width: 25%;
+
+    img {
+      @include border-radius(50%);
+      height: auto;
+      max-width: 100%;
+    }
+
+    > a:hover {
+      &,
+      .Staff-list-name {
+        color: #999;
+      }
+    }
+  }
+}
+
+.Staff-list-name,
+.Staff-list-date {
+  display: block;
+}
+
+.Staff-list-name {
+  color: $gray-700;
+  font-size: $font-size-sm;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Staff-list-date {
+  color: darken($gray-500, 20%);
+  font-size: 12px;
+}
